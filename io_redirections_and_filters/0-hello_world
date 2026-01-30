@@ -1,2 +1,2 @@
 #!/bin/bash
-wc -l /mnt/user-data/outputs/0-hello_world
+echo "Hello, World"
