@@ -1,11 +1,3 @@
 #!/usr/bin/env bash
 # Displays visitor IP and HTTP status code from Apache access log
-awk '{print $1, $9}' server-access.log
-```
-
-Simple and clean. Here's why `$1` and `$9`:
-
-An Apache access log line looks like this:
-```
-185.130.5.207 - - [11/Sep/2016:11:58:35 +0000] "GET /index.html HTTP/1.1" 301 ...
-$1                                                                        $9
+awk 'NF >= 9 {print $1, $9}' "$1"
