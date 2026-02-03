@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# Displays visitor IP and HTTP status code from Apache access log
-awk 'NF >= 9 {print $1, $9}' "$1"
+#This script displays the visitor's ip from apache file
+
+file="apache-access.log"
+awk '{print $1, $9}' $file"

@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# Groups visitors by IP and HTTP status code, sorted by occurrences
-awk 'NF >= 9 {print $1, $9}' "$1" | sort | uniq -c | sort -rnn
+#This script also digs data from apache log file
+
+file="apache-access.log"
+awk '{print $1, $9}' $file | sort | uniq -c | sort -nr
