@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times using until loop
-i=0
-until [ $i -eq 10 ]; do
-    echo "Best School"
-    i=$((i + 1))
+#bash script that displays best school 10 times but adds hi on a particular line
+
+count=1
+while [ $count -le 10 ]
+do 
+if [ $count -eq 9 ]; then
+echo "Best School"
+echo "Hi"
+else 
+	echo "Best School"
+fi
+((count++))
 done
