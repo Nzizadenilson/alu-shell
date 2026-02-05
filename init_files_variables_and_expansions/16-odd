@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -n . | grep '^[0-9]*[13579]:' | cut -d: -f2--
+sort | perl -ne 'print if $. % 2 != 0'
